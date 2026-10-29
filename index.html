@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이찬희</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+}
+
+
+body{
+    background:transparent;
+    color:#00ff88;
+    font-family:Consolas, monospace;
+    line-height:1.8;
+    min-height:100vh;
+    padding-bottom:70px;
+}
+
+
+
+/* 제목 */
+
+header{
+    text-align:center;
+    padding:50px 20px;
+    border-bottom:2px solid #00ff88;
+}
+
+
+header h1{
+    font-size:3rem;
+    text-shadow:0 0 15px #00ff88;
+}
+
+
+header p{
+    color:#bdbdbd;
+    margin-top:10px;
+}
+
+
+
+/* 카드 */
+
+.card{
+
+    display:none;
+
+    width:75%;
+    max-width:900px;
+
+    margin:25px auto;
+
+    background:#161616;
+
+    padding:25px;
+
+    border-left:5px solid #00ff88;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 0 15px rgba(0,255,136,0.2);
+
+}
+
+
+.card.active{
+
+    display:block;
+
+}
+
+
+
+.card h2{
+
+    margin-bottom:15px;
+
+    color:#00ff88;
+
+}
+
+
+
+.card p{
+
+    color:#e0e0e0;
+
+}
+
+
+
+.quote{
+
+    font-style:italic;
+
+    color:#00ffaa;
+
+    margin-top:15px;
+
+}
+
+
+
+
+/* 메뉴 */
+
+.menu{
+
+    width:75%;
+
+    max-width:900px;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    padding:15px;
+
+
+    background:rgba(0,0,0,0.8);
+
+
+    border:1px solid #00ff88;
+
+    border-radius:12px;
+
+
+    box-shadow:
+    0 0 10px rgba(0,255,136,.5);
+
+}
+
+
+
+.menu a{
+
+    color:#00ff88;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+
+    border:1px solid #00ff88;
+
+    border-radius:8px;
+
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.menu a:hover{
+
+    background:#00ff88;
+
+    color:#000;
+
+
+    box-shadow:
+    0 0 10px #00ff88,
+    0 0 20px #00ff88;
+
+}
+
+
+
+/* footer 고정 */
+
+footer{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+
+    text-align:center;
+
+    padding:15px;
+
+
+    background:rgba(0,0,0,0.85);
+
+
+    border-top:1px solid #00ff88;
+
+    color:#888;
+
+
+    z-index:10;
+
+}
+
+
+
+/* Matrix */
+
+#matrix{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+
+    width:100vw;
+
+    height:100vh;
+
+
+    background:#000;
+
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>이찬희</h1>
+
+<p>
+자기소개 및 내가 존경하는 인물
+</p>
+
+</header>
+
+
+
+<nav class="menu">
+
+
+<a href="#" onclick="showCard('intro')">
+[ 자기소개 ]
+</a>
+
+
+<a href="#" onclick="showCard('person')">
+[ 존경하는 인물 ]
+</a>
+
+
+<a href="#" onclick="showCard('reason')">
+[ 존경하는 이유 ]
+</a>
+
+
+<a href="#" onclick="showCard('license')">
+[ 자격증 ]
+</a>
+
+
+<a href="#" onclick="showCard('effort')">
+[ 노력할 부분 ]
+</a>
+
+
+</nav>
+
+
+
+
+
+<div class="card" id="intro">
+
+
+<h2>➡️ 자기소개</h2>
+
+
+<p>
+
+안녕하세요. 저는 이찬희입니다.<br>
+
+컴퓨터와 정보보안 분야에 관심이 많으며,
+
+새로운 기술을 배우고 탐구하는 것을 좋아합니다.
+
+
+특히 사이버 보안과 해킹의 역사에 큰 흥미를 가지고 있습니다.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card" id="person">
+
+
+<h2>
+💻 존경하는 인물 - Kevin Mitnick
+</h2>
+
+
+<p>
+
+케빈 미트닉은 세계적으로 유명한 해커이자
+정보보안 전문가입니다.
+
+그는 뛰어난 사회공학 기법과 해킹 기술로
+잘 알려져 있으며,
+
+이후에는 보안 전문가로 활동하면서
+많은 기업과 사람들에게 보안의 중요성을 알렸습니다.
+
+</p>
+
+
+
+<p class="quote">
+
+"보안의 가장 약한 고리는 사람이 될 수 있다."
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card" id="reason">
+
+
+<h2>
+⭐ 존경하는 이유
+</h2>
+
+
+<p>
+
+케빈 미트닉은 자신의 경험을 통해
+정보보안의 중요성을 널리 알렸습니다.
+
+실수를 통해 배우고,
+그것을 긍정적인 방향으로 바꾸어
+사회에 기여한 모습이 존경스럽습니다.
+
+또한 끊임없이 배우고 성장하는 자세를
+본받고 싶습니다.
+
+</p>
+
+
+</div><div class="card" id="license">
+
+    <h2>🪪 필요한 자격증</h2>
+    
+    <p>
+    정보보안 전문가가 되기 위해서는 다양한 보안 자격증을 취득하는 것이 도움이 됩니다.
+    저는 앞으로 다음과 같은 자격증에 도전하고 싶습니다.
+    </p>
+    
+    
+    <ul style="margin-top:15px; padding-left:25px; color:#e0e0e0;">
+    
+    <li>정보처리기능사 - 컴퓨터 및 프로그래밍 기초</li>
+    
+    <li>정보보안산업기사 - 보안 전문 지식 습득</li>
+    
+    <li>네트워크관리사 2급 - 네트워크 이해</li>
+    
+    <li>리눅스마스터 2급 - 서버 및 운영체제 관리</li>
+    
+    <li>정보보안기사 - 정보보안 전문가 자격</li>
+    
+    <li>CEH (Certified Ethical Hacker) - 윤리적 해킹 기술</li>
+    
+    </ul>
+    
+    
+    <p class="quote">
+    "지식은 가장 강력한 보안 도구이다."
+    </p>
+    
+    </div>
+    
+    
+    
+    
+    
+    <div class="card" id="effort">
+    
+    <h2>
+    🖱️ 케빈 미트닉처럼 되기 위해 노력해야 할 부분
+    </h2>
+    
+    
+    <p>
+    케빈 미트닉과 같은 정보보안 전문가가 되기 위해서는
+    단순히 해킹 기술만 배우는 것이 아니라
+    다양한 분야의 지식과 꾸준한 노력이 필요합니다.
+    </p>
+    
+    
+    
+    <ul style="margin-top:15px; padding-left:25px; color:#e0e0e0;">
+    
+    
+    <li>
+    컴퓨터와 네트워크의 기본 원리를 꾸준히 학습하기
+    </li>
+    
+    
+    <li>
+    프로그래밍 언어(Python, C, Java 등) 공부하기
+    </li>
+    
+    
+    <li>
+    리눅스 운영체제와 서버 관리 능력 키우기
+    </li>
+    
+    
+    <li>
+    정보보안 관련 자격증 취득하기
+    </li>
+    
+    
+    <li>
+    보안 뉴스와 최신 사이버 공격 사례 꾸준히 찾아보기
+    </li>
+    
+    
+    <li>
+    문제 해결 능력과 논리적 사고력 기르기
+    </li>
+    
+    
+    <li>
+    윤리 의식을 갖고 올바른 방향으로 기술 사용하기
+    </li>
+    
+    
+    <li>
+    끊임없이 배우고 도전하는 자세 유지하기
+    </li>
+    
+    
+    </ul>
+    
+    
+    <p class="quote">
+    "성공한 보안 전문가는 호기심과 끈기를 절대 잃지 않는다."
+    </p>
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    <footer>
+    
+    © 2026 이찬희 | Kevin Mitnick Tribute Page
+    
+    </footer>
+    
+    
+    
+    
+    
+    <canvas id="matrix"></canvas>
+    
+    
+    
+    
+    <script src=./main.js></script>
+    
+    
+    </body>
+    </html>
